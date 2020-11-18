@@ -7,7 +7,6 @@ import com.devonfw.module.basic.common.api.to.AbstractTo;
 
 /**
  * @author PRWALA
- *
  */
 public class ItemSearchCriteriaTo extends AbstractTo {
 
@@ -22,6 +21,8 @@ public class ItemSearchCriteriaTo extends AbstractTo {
   private StringSearchConfigTo descriptionOption;
 
   private Pageable pageable;
+
+  private static final long serialVersionUID = 1L;
 
   public String getName() {
 

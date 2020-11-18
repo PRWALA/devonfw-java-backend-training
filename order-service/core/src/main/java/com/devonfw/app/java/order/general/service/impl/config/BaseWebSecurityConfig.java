@@ -85,6 +85,8 @@ public abstract class BaseWebSecurityConfig extends WebSecurityConfigurerAdapter
         // logout via POST is possible
         .logout().logoutSuccessUrl("/login.html").and()
 
+        .headers().frameOptions().sameOrigin().and()
+
         // register login and logout filter that handles rest logins
         .addFilterAfter(getSimpleRestAuthenticationFilter(), BasicAuthenticationFilter.class)
         .addFilterAfter(getSimpleRestLogoutFilter(), LogoutFilter.class);

@@ -67,10 +67,6 @@ public interface OrderRepository extends DefaultRepository<OrderEntity> {
     return findByCriteria(criteria).getContent();
   }
 
-  // default OrderEntity createOrder() {
-  //
-  // }
-
   /**
    * Add sorting to the given query on the given alias
    *

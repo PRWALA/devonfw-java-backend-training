@@ -22,10 +22,9 @@ public class OrderSearchCriteriaTo extends AbstractSearchCriteriaTo {
 
   /**
    * getter for ownerId attribute
-   * 
+   *
    * @return ownerId
    */
-
   public Long getOwnerId() {
 
     return ownerId;
@@ -34,7 +33,6 @@ public class OrderSearchCriteriaTo extends AbstractSearchCriteriaTo {
   /**
    * @param owner setter for owner attribute
    */
-
   public void setOwnerId(Long ownerId) {
 
     this.ownerId = ownerId;
@@ -43,7 +41,6 @@ public class OrderSearchCriteriaTo extends AbstractSearchCriteriaTo {
   /**
    * @return priceId
    */
-
   public Double getPrice() {
 
     return price;
@@ -52,7 +49,6 @@ public class OrderSearchCriteriaTo extends AbstractSearchCriteriaTo {
   /**
    * @param price setter for price attribute
    */
-
   public void setPrice(Double price) {
 
     this.price = price;
@@ -61,7 +57,6 @@ public class OrderSearchCriteriaTo extends AbstractSearchCriteriaTo {
   /**
    * @return creationDateId
    */
-
   public LocalDate getCreationDate() {
 
     return creationDate;
@@ -70,7 +65,6 @@ public class OrderSearchCriteriaTo extends AbstractSearchCriteriaTo {
   /**
    * @param creationDate setter for creationDate attribute
    */
-
   public void setCreationDate(LocalDate creationDate) {
 
     this.creationDate = creationDate;
@@ -79,7 +73,6 @@ public class OrderSearchCriteriaTo extends AbstractSearchCriteriaTo {
   /**
    * @return statusId
    */
-
   public OrderStatus getStatus() {
 
     return status;
@@ -88,7 +81,6 @@ public class OrderSearchCriteriaTo extends AbstractSearchCriteriaTo {
   /**
    * @param status setter for status attribute
    */
-
   public void setStatus(OrderStatus status) {
 
     this.status = status;

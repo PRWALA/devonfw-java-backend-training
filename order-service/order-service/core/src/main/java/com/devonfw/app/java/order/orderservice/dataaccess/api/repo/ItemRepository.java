@@ -19,7 +19,6 @@ import com.querydsl.jpa.impl.JPAQuery;
 
 /**
  * @author PRWALA
- *
  */
 public interface ItemRepository extends DefaultRepository<ItemEntity> {
 
@@ -69,8 +68,14 @@ public interface ItemRepository extends DefaultRepository<ItemEntity> {
 
   }
 
-  // @Query("update Item i set i.price = :price WHERE i.id = :itemId")
-  // void updateItemPriceWithGivenId(@Param("itemId") Long id, @Param("price") Double price);
+  default Page<ItemEntity> findItemByName(String name) {
+
+    ItemSearchCriteriaTo criteria = new ItemSearchCriteriaTo();
+    criteria.setName(name);
+
+    return findByCriteria(criteria);
+
+  }
 
   default void updateItemPriceWithGivenId(Long id, Double price) {
 
@@ -79,6 +84,26 @@ public interface ItemRepository extends DefaultRepository<ItemEntity> {
       itemEntity.get().setPrice(price);
       save(itemEntity.get());
     }
+  }
+
+  default ItemEntity findItemById(Long id) {
+
+    return findItemById(id);
+  }
+
+  default void saveItem(ItemEntity entity) {
+
+    save(entity);
+  }
+
+  default void deleteItemById(Long id) {
+
+    deleteById(id);
+  }
+
+  default ItemEntity getOne(long id) {
+
+    return getOne(id);
   }
 
   public default void addOrderBy(JPAQuery<ItemEntity> query, ItemEntity alias, Sort sort) {
@@ -115,4 +140,5 @@ public interface ItemRepository extends DefaultRepository<ItemEntity> {
       }
     }
   }
+
 }
